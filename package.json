@@ -1,0 +1,23 @@
+{
+  "name": "exercicios-javascript-dw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Ex1-Objetos e Prototypes pt1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinicius-vses/Exercicios-JavaScript-DW2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinicius-vses/Exercicios-JavaScript-DW2/issues"
+  },
+  "homepage": "https://github.com/vinicius-vses/Exercicios-JavaScript-DW2#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
