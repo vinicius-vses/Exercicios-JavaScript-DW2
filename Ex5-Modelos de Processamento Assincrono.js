@@ -6,15 +6,34 @@
 forma assíncrona, utilizando as formas vistas na aula de hoje:
 then() e async/await*/
 
-function connection(){
+const connection = () => new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Banco conectado com sucesso!"), 1000);
+});
 
+const query = () => new Promise((resolve, reject) => {
+    setTimeout(() => resolve("SELECT * FROM Cadastro"), 2000);
+});
 
+const update = () => new Promise((resolve, reject) => {
+    setTimeout(() => resolve("UPDATE Cadastro SET Nome Atualizado WHERE id = 1"), 3000);
+});
+
+const simulacaoBd = async () => {
+    const conecta = await connection().then((response) => {
+        console.log(response);
+    }).catch((err) => {
+        console.log(err);
+    });
+    const consulta = await query().then((response) => {
+        console.log(response);
+    }).catch((err) => {
+        console.log(err);
+    });
+    const atualiza = await update().then((response) => {
+        console.log(response);
+    }).catch((err) => {
+        console.log(err);
+    });
 }
 
-function queryDatabase(){
-this.conn ('SELECT * FROM Cadastro');
-}
-
-function updateDatabase(){
-this.conn ('UPDATE Cadastro SET NovoNome WHERE id = 1');
-}
+simulacaoBd();
